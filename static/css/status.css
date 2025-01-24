@@ -1,0 +1,80 @@
+html {
+    font-size: 25px;
+}
+
+rt {
+    font-size: 0.6em;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    /* background: url('https://api.maao.cc/paimon/') no-repeat center center fixed; */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s ease-in-out; 
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.sleeping {
+    color: gray;
+}
+
+.awake {
+    color: rgb(16, 128, 0);
+}
+
+.maimai{
+    color: orange;
+}
+
+.drive {
+    color: red;
+}
+
+
+.error {
+    color: red;
+}
+
+#sleep-date {
+    position: relative;
+    cursor: pointer;
+}
+
+#sleep-date::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+    font-size: 0.6em; /* 缩小注释字体 */
+}
+
+#sleep-date:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
