@@ -13,8 +13,27 @@ body, html {
     overflow: hidden;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* 关键：使用和 body 相同的背景图 */
+    background-image: inherit;
+
+    filter: blur(50px);   /* 模糊程度，可调 20~100px */
+    transform: scale(1.2); /* 防止模糊产生边缘 */
+    z-index: -1;
+
+    /* 必须让 body 成为定位上下文 */
+    pointer-events: none;
+}
 body {
-    /* background: url('https://api.maao.cc/paimon/') no-repeat center center fixed; */
+    position: relative;
+    min-height: 100vh;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -23,6 +42,8 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 body::before {
@@ -97,5 +118,6 @@ body::before {
     transform: translateY(0);
 
 }
+
 
 
