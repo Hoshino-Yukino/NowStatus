@@ -35,7 +35,7 @@ body::before {
   background-image: url("your-bg.jpg");
   background-size: cover;
   background-position: center;
-  filter: blur(10px); /* 模糊半径 */
+  filter: blur(30px); /* 模糊半径 */
   z-index: -1;       /* 放在所有内容后面 */
   transform: scale(1.1); /* 防止 blur 产生边缘空隙 */
 }
@@ -97,4 +97,5 @@ body::before {
     transform: translateY(0);
 
 }
+
 
