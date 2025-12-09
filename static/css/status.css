@@ -24,7 +24,7 @@ body::before {
     /* 关键：使用和 body 相同的背景图 */
     background-image: inherit;
 
-    filter: blur(6px);   /* 模糊程度，可调 20~100px */
+    filter: blur(2px);   /* 模糊程度，可调 20~100px */
     transform: scale(1.2); /* 防止模糊产生边缘 */
     z-index: -1;
 
@@ -103,6 +103,7 @@ body {
     transform: translateY(0);
 
 }
+
 
 
 
