@@ -63,11 +63,16 @@ body {
 }
 
 .maimai{
-    color: orange;
+    color: rgb(0,255,255);
 }
+
 
 .drive {
     color: red;
+}
+
+.work{
+    color: rgb(128,0,128)
 }
 
 
@@ -103,6 +108,7 @@ body {
     transform: translateY(0);
 
 }
+
 
 
 
