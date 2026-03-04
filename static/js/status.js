@@ -23,7 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else if (statusData === 3) {
                     statusElement.classList.add('drive');
                     additionalInfoElement.textContent = '可能无法及时回复，如果情况紧急，请直接以电话等方式和Hoshino-Yukino取得联系。';
-				} else {
+				} else if (statusData === 4) {
+                    statusElement.classList.add('work');
+                    additionalInfoElement.textContent = '可能无法及时回复，如果情况紧急，请直接以电话等方式和Hoshino-Yukino取得联系。';
+				} 
+				else {
                     statusElement.textContent = '<!>后端响应出错<!>';
                     statusElement.classList.add('error');
                     additionalInfoElement.textContent = '错误会很快恢复。如果情况紧急，请直接以电话等方式和Hoshino-Yukino取得联系。';
@@ -100,3 +104,4 @@ document.addEventListener("DOMContentLoaded", () => {
         updateBackground();
     }, 60000);
 });
+
